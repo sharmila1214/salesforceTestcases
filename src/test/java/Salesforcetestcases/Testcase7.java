@@ -26,8 +26,9 @@ public class Testcase7 extends Browser{
 	driver.findElement(By.xpath("//a[@id='CustomizeTabs_font']")).click();
 WebElement ele=	driver.findElement(By.id("duel_select_0"));
 Select list=new Select(ele)	;
-list.selectByVisibleText("Reports");
+list.selectByVisibleText("Assets");
 driver.findElement(By.xpath("//img[@class='rightArrowIcon']")).click();	
+driver.findElement(By.xpath("//input[@name='save']"));
 waitforpageelementtoVisible(driver.findElement(By.xpath("//div[@id='EmailSetup']//a[@class='header setupFolder']")));
 		driver.findElement(By.xpath("//div[@id='EmailSetup']//a[@class='header setupFolder']")).click();
 	Thread.sleep(3000);
@@ -38,7 +39,7 @@ waitforpageelementtoVisible(driver.findElement(By.xpath("//div[@id='EmailSetup']
 		driver.findElement(By.id("auto_bcc1")).click();
 		//driver.findElement(By.xpath("//input[@name='save']")).click();
 		driver.findElement(By.xpath("//td[@id='bottomButtonRow']//input[contains(@name,'cancel')]")).click();
-		
+		Thread.sleep(3000);
 		waitforpageelementtoVisible(driver.findElement(By.xpath("//span[@id='CalendarAndReminders_font']")));
 		driver.findElement(By.xpath("//span[@id='CalendarAndReminders_font']")).click();	
 		
